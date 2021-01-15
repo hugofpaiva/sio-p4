@@ -1,0 +1,1 @@
+Jan  6 10:04:21 cyberdyne kernel: [ 1343.816675] audit: type=1400 audit(1609927461.786:7): apparmor="DENIED" operation="exec" profile="/usr/sbin/sysinfo" name="/tmp/lspci" pid=981 comm="sysinfo" requested_mask="x" denied_mask="x" fsuid=0 ouid=33

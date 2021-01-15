@@ -1,0 +1,35 @@
+Bom dia,
+
+Recebemos um pedido de um cliente que parece estar em apuros. Aparentemente alguém invadiu um dos servidores (uma VM).
+A Firewall externa detetou uns downloads suspeitos e desligaram logo a VM, pelo que o atacante (se é que foi um ataque) não deve ter feito muito.
+Foi um aviso automático, pelo que não se descarta ser um falso alarme.
+
+Isto já é um cliente antigo. O programador não é o melhor (aliás, conheço poucos piores), pelo
+que a página possui bastantes problemas. Em tempos a nossa empresa fez uma auditoria ao software e pentest. Reportámos muitas coisas básicas, a maioria relacionada com a má utilização de PHP. Segundo me lembro era possível realizar SQL injection no login, nos campos
+dos produtos (type ou productid...), o PHP para downloads permitia obter ficheiros do sistema, etc... Não havia um único query bem construído.
+Até faziam um include direto de conteúdos via um GET['lang'], o que permitia RCE. Foi uma daquelas análises longas de fazer.
+
+Recomendámos usarem mecanismos de confinamento, acederem à DB devidamente e validarem corretamente todas as entradas. Claramente não implementaram tudo (se é que realmente fizeram alguma alteração) e agora poderá ter acontecido algo mais grave.
+
+O nosso trabalho vai ser de análise forense para verificar o que aconteceu e qual o impacto.
+
+Juntamente com o teu colega, prepara um relatório que descreva com detalhe:
+
+- O que estava implementado a nível de confinamento das aplicações (tínhamos recomendado isto).
+- Qual a sequência de ações que o atacante tomou?
+- Que vulnerabilidades foram exploradas e como?
+- Que vulnerabilidades o atacante tentou explorar mas foram barradas devido a mecanismos de proteção?
+- Que alterações foram realizadas e qual o propósito aparente?
+- Foram realmente realizadas transferências? Se sim, como e qual o conteúdo?
+
+Não deixem escapar nada. Precisamos realmente de saber o que foi feito, como foi explorado e o que foi barrado.
+
+Para auxiliar este trabalho, podes encontrar no nosso sistema moodle a imagem da VM, os logs e o tráfego da VM capturado na Firewall.
+
+Podes montar a imagen (Read-only), numa VM que já tenhas e analisar o sistema.
+Deverão existir registos em /var/log, semelhantes aos que estão no moodle.
+
+Preparem o relatório para entregar até ao final do dia 22 de Janeiro.
+Para qualquer dúvida, usem o Teams interno.
+
+Saudações e bom trabalho.

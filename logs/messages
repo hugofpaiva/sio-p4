@@ -1,0 +1,4 @@
+Jan  6 09:50:36 cyberdyne rsyslogd: [origin software="rsyslogd" swVersion="8.2010.0" x-pid="854" x-info="https://www.rsyslog.com"] exiting on signal 15.
+Jan  6 09:50:36 cyberdyne rsyslogd: imuxsock: Acquired UNIX socket '/run/systemd/journal/syslog' (fd 3) from systemd.  [v8.2010.0]
+Jan  6 09:50:36 cyberdyne rsyslogd: [origin software="rsyslogd" swVersion="8.2010.0" x-pid="908" x-info="https://www.rsyslog.com"] start
+Jan  6 10:04:21 cyberdyne kernel: [ 1343.816675] audit: type=1400 audit(1609927461.786:7): apparmor="DENIED" operation="exec" profile="/usr/sbin/sysinfo" name="/tmp/lspci" pid=981 comm="sysinfo" requested_mask="x" denied_mask="x" fsuid=0 ouid=33
