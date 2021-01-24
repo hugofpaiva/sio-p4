@@ -1,0 +1,24 @@
+-- Logs begin at Wed 2021-01-06 10:07:41 WET, end at Wed 2021-01-06 10:10:43 WET. --
+jan 06 10:07:41 cyberdyne sshd[1022]: Received disconnect from 192.168.1.108 port 31367:11: disconnected by user
+jan 06 10:07:41 cyberdyne sshd[1022]: Disconnected from user skynet 192.168.1.108 port 31367
+jan 06 10:10:43 cyberdyne su[803]: pam_unix(su:session): session closed for user root
+jan 06 10:10:43 cyberdyne systemd[781]: Stopped target Main User Target.
+jan 06 10:10:43 cyberdyne systemd[781]: Stopped target Basic System.
+jan 06 10:10:43 cyberdyne systemd[781]: Stopped target Paths.
+jan 06 10:10:43 cyberdyne systemd[781]: Stopped target Sockets.
+jan 06 10:10:43 cyberdyne systemd[781]: Stopped target Timers.
+jan 06 10:10:43 cyberdyne systemd[781]: dirmngr.socket: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[781]: Closed GnuPG network certificate management daemon.
+jan 06 10:10:43 cyberdyne systemd[781]: gpg-agent-browser.socket: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[781]: Closed GnuPG cryptographic agent and passphrase cache (access for web browsers).
+jan 06 10:10:43 cyberdyne systemd[781]: gpg-agent-extra.socket: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[781]: Closed GnuPG cryptographic agent and passphrase cache (restricted).
+jan 06 10:10:43 cyberdyne systemd[781]: gpg-agent-ssh.socket: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[781]: Closed GnuPG cryptographic agent (ssh-agent emulation).
+jan 06 10:10:43 cyberdyne systemd[781]: gpg-agent.socket: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[781]: Closed GnuPG cryptographic agent and passphrase cache.
+jan 06 10:10:43 cyberdyne systemd[781]: Removed slice User Application Slice.
+jan 06 10:10:43 cyberdyne systemd[781]: Reached target Shutdown.
+jan 06 10:10:43 cyberdyne systemd[781]: systemd-exit.service: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[781]: Finished Exit the Session.
+jan 06 10:10:43 cyberdyne systemd[781]: Reached target Exit the Session.

