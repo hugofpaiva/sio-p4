@@ -100,7 +100,7 @@
 
 \par Conhecendo o contexto da situação, sabe-se à partida que se tratava de um sistema com uma série de vulnerabilidades já detectadas previamente, como por exemplo, a possibilidade de \textit{SQL Injection} nos campos de \textit{login}, vulnerabilidades de \textit{Local File Inclusion}, entre outros.
 
-\par Tendo isto em conta, foram identificadas as vulnerabilidades exploradas pelo atacante durante a sequência de ataque e se estas tiveram sucesso, bem como qual o objetivo das mesmas. 
+\par Tendo isto em conta, foram identificadas as vulnerabilidades exploradas pelo atacante durante a sequência de ataque e se estas foram exploradas com sucesso, bem como qual o objetivo das mesmas. 
 \clearpage
 
 \clearpage
@@ -153,7 +153,7 @@
     \caption{\textit{Logs} de acesso ao servidor \textit{Apache}}
 \end{figure}
 
-\par Como é possível ver através dos \textit{logs} de acesso, foram realizados diversos pedidos ao servidor sendo que o formato dos \textit{logs} apresentados contém:
+\par Como é possível ver através dos \textit{logs} de acesso, foram realizados diversos pedidos ao servidor sendo que o formato dos \textit{logs} apresentados contem:
 
 \begin{itemize}
     \item Endereço IP do cliente
@@ -176,7 +176,7 @@
     \caption{\textit{Logs} de erro ao servidor \textit{Apache}}
 \end{figure}
 
-\par O formato dos \textit{logs} apresentados contém:
+\par O formato dos \textit{logs} apresentados contem:
 
 \begin{itemize}
     \item Data do pedido que gerou o erro
@@ -194,7 +194,7 @@
 
 \subsection{\textit{SQL Injection}}
 \subsubsection{Acesso ao administrador}
-\par O primeiro passo no processo de ataque à máquina analisada foi o \textit{login} na aplicação que foi conseguido através de tentativa e erro com \textit{SQL Injection} no campo de \textit{login}.
+\par O primeiro passo no processo de ataque à máquina analisada foi o \textit{login} na aplicação que foi obtido através de tentativa e erro com \textit{SQL Injection} no campo de \textit{login}.
 
 \begin{figure}[h]
     \centering
@@ -221,14 +221,14 @@
 
 \par Posteriormente o atacante tenta aceder aos conteúdos de \textit{x.txt} de forma a confirmar se a inserção foi bem sucedida mas o servidor  retorna erro \textit{404 Not Found}.
 
-\subsection{Downloads.php}
-\par O \textit{downloads.php} foi explorado, com objetivo de explorar uma vulnerabilidade \textit{LFI}, a qual permite acesso a múltiplos ficheiros do sistema. Neste caso foram acedidos os ficheiros \textit{Brochure.pdf}, \textit{index.php}, \textit{config.php} e \textit{display.php}
+\subsection{\textit{Downloads.php}}
+\par O \textit{downloads.php} foi explorado com objetivo de explorar uma vulnerabilidade \textit{LFI}, a qual permite acesso a múltiplos ficheiros do sistema. Neste caso foram acedidos os ficheiros \textit{Brochure.pdf}, \textit{index.php}, \textit{config.php} e \textit{display.php}
 \par Os pedidos foram todos efetuados segundo o mesmo formato:
 \par \textit{GET /download.php?item=../display.php HTTP/1.1}
 \bigskip
-\par Os resultados foram retornados em bytes, mas permitiram ao atacante obter informação sobre como o sistema funciona e posteriormente aproveitar essa informação para identificar vulnerabilidades a explorar.
+\par Os resultados foram retornados em bytes mas permitiram ao atacante obter informação sobre como o sistema funciona e posteriormente aproveitar essa informação para identificar vulnerabilidades a explorar.
 
-\subsection{Display.php}
+\subsection{\textit{Display.php}}
 \par Através do campo \textit{type} de \textit{display.php}, foi possível introduzir comandos de terminal resultando numa série de comprometimentos de segurança explorados pelo atacante, que primeiramente efetuou o seguinte pedido:
 \begin{figure}[h]
     \centering
@@ -254,7 +254,7 @@
 
 \par Durante o primeiro passo do ataque à máquina analisada, o atacante focou-se na página de \textit{login}, utilizando os campos do formulário para verificar se o mesmo estava vulnerável a \textit{SQL Injection}, o que se verificou. O atacante começou por colocar uma simples \textit{'} na entrada do email para verificar a existência da vulnerabilidade, o que se confirmou com o servidor a retornar um erro relacionado com a sintaxe de \textit{SQL}. Posto isto, o mesmo procedeu a outras tentativas, sendo que conseguiu realizar o \textit{login} com a primeira conta que se encontrava na base de dados, o \textit{admin}, ao colocar no campo do email \textit{' OR 1=1 -- //}, uma vez que a condição de \textit{SELECT} retornará sempre um utilizador pois 1 é sempre igual 1, ignorando todas as restantes verificações a seguir na \textit{query}, podendo ser colocada qualquer \textit{password}.
 
-\par O atacante continuou a explorar esta vulnerabilidade no entanto, tentou iniciar sessão com um email que não existia na base de dados, o \textit{admin@expressivemotors.net}, uma vez que foi sempre redireccionado para \textit{/account.php?login=user} tal como de acordo com o código de \textit{login}, não obtendo o resultado pretendido.
+\par O atacante continuou a explorar esta vulnerabilidade no entanto, tentou iniciar sessão com um email que não existia na base de dados, o \textit{admin@expressivemotors.net}, uma vez que foi sempre redireccionado para \textit{/account.php?login=user} como de acordo com o código de \textit{login}, não obtendo o resultado pretendido.
 
 \begin{figure}[h]
     \centering
@@ -262,7 +262,7 @@
     \caption{Código do \textit{login.php} que redireciona para \textit{/account.php?login=user} caso não exista conta}
 \end{figure}
 
-\par O ataque continuou passando por explorar o \textit{website} encontrando outras vulnerabilidades do tipo \textit{SQL Injection} em \textit{products.php} e \textit{details.php}. Na primeira vulnerabilidade, o atacante tentou obter informações relativas às tabelas da base de dados no entanto, apesar de a \textit{query} à base de dados estar desprotegidas, as informações apresentadas eram apenas de certas colunas ou se existisse um erro na base de dados, o que levou a que não se obtivesse nenhuma informação relativa. Em relação à segunda, a mesma situação ocorreu pelo que as tentativas feitas de escrita num ficheiro foram executadas, como é possível verificar pelo erro retornado ao fazer o segundo pedido, dizendo que o ficheiro já existia. No entanto, ao analisar a máquina, não foi possível encontrar o ficheiro. 
+\par O ataque continuou passando por explorar o \textit{website} encontrando outras vulnerabilidades do tipo \textit{SQL Injection} em \textit{products.php} e \textit{details.php}. Na primeira vulnerabilidade, o atacante tentou obter informações relativas às tabelas da base de dados no entanto, apesar de as \textit{queries} à base de dados estarem desprotegidas, as informações apresentadas eram apenas de certas colunas ou apenas apresentado erro, o que levou a que não se obtivesse nenhuma informação relativa. Em relação à segunda, a mesma situação ocorreu pelo que as tentativas feitas de escrita num ficheiro foram executadas, como é possível verificar pelo erro retornado ao fazer o segundo pedido, dizendo que o ficheiro já existia. No entanto, ao analisar a máquina, não foi possível encontrar o ficheiro. 
 
 \subsection{\textit{Local File Inclusion (LFI)}}
 
@@ -292,7 +292,7 @@
 
 \clearpage
 
-\par Além disso, um dos ficheiros obtidos contém as credenciais da base de dados, sendo um comprometimento de informação muito elevado: 
+\par Além disso, um dos ficheiros obtidos contem as credenciais da base de dados, sendo um comprometimento de informação muito elevado: 
 
 \begin{figure}[h]
     \centering
@@ -429,7 +429,7 @@
 
 \par Para terminar, pensa-se que, de acordo com as metas estabelecidas pelo docente, o trabalho foi bem sucedido. Foi possível detectar as vulnerabilidades que realmente deram total acesso da máquina ao atacante, bem como entender todo o caminho percorrido pelo mesmo e quais as ações evitadas devido às medidas de segurança implementadas.
 
-\par Através de todas estas descobertas, o cliente já terá uma grande ideia do quão vulnerável a sua máquina realmente está e deve implementar o quanto antes medidas para evitar estes ataques, devendo a máquina estar indisponível até lá, tendo em conta a gravidade dos potenciais ataques.
+\par Através de todas estas descobertas, o dono do servidor já terá uma grande ideia do quão vulnerável a sua máquina realmente está e deve implementar o quanto antes medidas para evitar estes ataques, devendo a máquina estar indisponível até lá, tendo em conta a gravidade dos potenciais ataques.
 
 \par Este trabalho focou-se nos problemas mais graves detectados relativamente à segurança do sistema pelo que a explicação de alguns conceitos menos relevantes pode não estar presente.
 
@@ -459,7 +459,9 @@
 
 [8] \url{https://ghidra-sre.org}
 
-\par Para além destas fontes, foram utilizadas ao longo da pesquisa diversas fontes de suporte em relação às diversas tecnologias da máquina. Foram também consultadas muitas fontes não fortemente relacionadas às vulnerabilidades encontradas que ajudaram a entender diversos problemas mas que acabaram por não se guardar.
+[9] \url{https://serverfault.com/questions/617007/how-do-i-find-out-where-my-iptables-rules-are-being-stored}
+
+\par Para além destas fontes, foram consultados os slides da disciplina e utilizadas diversas fontes de suporte em relação às diversas tecnologias da máquina. Foram também consultadas muitas fontes não fortemente relacionadas às vulnerabilidades encontradas que ajudaram a entender diversos problemas mas que acabaram por não se guardar.
 
 
 \end{document}
